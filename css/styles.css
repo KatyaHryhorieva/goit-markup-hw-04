@@ -302,12 +302,14 @@ letter-spacing: 0.02em;
 }
 
 .team-social-list {
-
-    display: flex;
-        gap: 24px;
-        align-items: center;
-        justify-content: center;
             padding: 32px 0;
+}
+
+.social-icons-list {
+        display: flex;
+            gap: 24px;
+            align-items: center;
+            justify-content: center;
 }
 
 .social-icon-link {
