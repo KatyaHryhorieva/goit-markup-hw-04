@@ -78,6 +78,7 @@ font-family: 'Raleway', sans-serif;
 
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 } 
 
 .header-wrap {
@@ -92,22 +93,6 @@ background-color: #FFF;
 display: flex;
 justify-content: space-between;
 align-items: center;
-}
-
-.current {
-position: relative;
-color: #404BBF;
-}
-
-.current::after{
-content: "";
-position: absolute;
-left:0;
-bottom: -1px;
-border-radius: 2px;
-background:  #404BBF;
-height: 4px;
-width: 100%;
 }
 
 .header-nav .logo {
@@ -151,6 +136,21 @@ padding: 24px 0;
  color: #404bbf;
 
 }
+.current {
+    position: relative;
+    color: #404BBF;
+}
+
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    background: #404BBF;
+    height: 4px;
+    width: 100%;
+}
 /* ----- HERO -----*/
 
 
@@ -160,6 +160,7 @@ background-repeat: no-repeat;
 background-position: center;
     background-size: cover;
 padding: 188px 0;
+max-width: 1440px;
 }
 .hero-title{
 color: #FFF;
@@ -191,7 +192,7 @@ padding: 16px 32px;
 margin: 0 auto;
 min-width: 169px;
 height: 56px;
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .hero-button:hover,
@@ -210,8 +211,8 @@ gap: 24px;
 
 .qualities-icon {
     fill: #4D5AE5;
-    width: 64px;
-    height: 64px;
+    max-width: 100%;
+    max-height: 100%;
 }
 .qualities-item{
     width: calc((100% - 24px*3)/4);
@@ -283,7 +284,7 @@ width: calc((100% - 3 * 24px) / 4);
 }
 
 .team-item .wrap-text {
-    padding: 32px 0 8px;
+    padding: 32px 0;
 }
 
 .team-item .list-item-title {
@@ -298,6 +299,9 @@ line-height: 1.50;
 letter-spacing: 0.02em;
 }
 
+.team-social-list {
+    padding: 32px 0;
+}
 .social-icons-list {
     display: flex;
     gap: 24px;
@@ -325,8 +329,8 @@ letter-spacing: 0.02em;
 
 .social-icon {
 fill: #F4F4FD;
-width: 16px;
-height: 16px;
+max-width: 100%;
+max-height: 100%;
 }
 
 /* ----- PORTFOLIO -----*/
